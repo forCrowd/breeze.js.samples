@@ -3,8 +3,9 @@
 }
 
 @Html.Partial("~/Views/Shared/_BowaHeader.cshtml")
+<h3>@ViewBag.Message</h3>
 
-<div data-ng-app="app" data-ng-include="'/app/todolists.html'"></div>
+<div data-ng-app="app" data-ng-include="'app/todolists.html'"></div>
 
 @section scripts
 {
@@ -16,8 +17,12 @@
     <!-- Breeze dependencies, Breeze itself, and Breeze extensions -->
     <script src="~/Scripts/datajs-1.1.1.js"></script>
 
-    <script src="~/Scripts/breeze.debug.js"></script>
+    <script src="~/Scripts/breeze.base.debug.js"></script>
     @*<script src="~/Scripts/breeze.min.js"></script>*@
+    <script src="~/Scripts/breeze.ajax.angular.js"></script>
+    <script src="~/Scripts/breeze.dataService.odata.js"></script>
+    <script src="~/Scripts/breeze.modelLibrary.backingStore.js"></script>
+    <script src="~/Scripts/breeze.uriBuilder.odata.js"></script>
     <script src="~/Scripts/breeze.bridge.angular.js"></script>
     <script src="~/Scripts/breeze.directives.js"></script>
     <script src="~/Scripts/toastr.min.js"></script>

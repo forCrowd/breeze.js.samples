@@ -14,7 +14,7 @@
 
     function emFactory(breeze) {
         configureBreeze();
-        var serviceRoot = window.location.protocol + '//' + window.location.host + '/';
+        var serviceRoot = window.location.protocol + '//' + window.location.host + '/breezejs/';
         var serviceName = serviceRoot + 'odata/';
         var factory = {
             newManager: newManager,
@@ -23,7 +23,10 @@
 
         return factory;
 
-        function configureBreeze() {           
+        function configureBreeze() {
+
+            breeze.config.initializeAdapterInstance('uriBuilder', 'odata');
+
             // use Web API OData to query and save
             breeze.config.initializeAdapterInstance('dataService', 'webApiOData', true);
 

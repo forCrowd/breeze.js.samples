@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Breeze/OData</title>
     <link rel="shortcut icon" type="image/png" href="/app/images/logo.png">
+    <base href="/breezejs/" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -23,7 +24,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("BOWA", "Bowa", "Home")</li>
+                    <li>@Html.ActionLink("BOWA A", "BowaA", "Home")</li>
+                    <li>@Html.ActionLink("BOWA B", "BowaB", "Home")</li>
+                    <li>@Html.ActionLink("BOWA C", "BowaC", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

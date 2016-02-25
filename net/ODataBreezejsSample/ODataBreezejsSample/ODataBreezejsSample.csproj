@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -202,6 +203,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602251539193_Initial.cs" />
+    <Compile Include="Migrations\201602251539193_Initial.Designer.cs">
+      <DependentUpon>201602251539193_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\TodoItem.cs" />
@@ -247,11 +252,18 @@
     <Content Include="Content\toastr.css.map">
       <DependentUpon>toastr.css</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Default.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\breeze.ajax.angular.js" />
+    <Content Include="Scripts\breeze.base.debug.js" />
     <Content Include="Scripts\breeze.bridge.angular.js" />
+    <Content Include="Scripts\breeze.dataService.odata.js" />
+    <Content Include="Scripts\breeze.dataService.odata_fixed.js" />
     <Content Include="Scripts\breeze.debug.js" />
     <Content Include="Scripts\breeze.directives.js" />
     <Content Include="Scripts\breeze.min.js" />
+    <Content Include="Scripts\breeze.modelLibrary.backingStore.js" />
+    <Content Include="Scripts\breeze.uriBuilder.odata.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -293,11 +305,14 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\toastr.min.js.map" />
-    <Content Include="Views\Home\Bowa.cshtml" />
     <Content Include="Views\Shared\_BowaHeader.cshtml" />
+    <Content Include="Views\Home\BowaA.cshtml" />
+    <Content Include="Views\Home\BowaB.cshtml" />
+    <Content Include="Views\Home\BowaC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\adapters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -305,6 +320,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602251539193_Initial.resx">
+      <DependentUpon>201602251539193_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

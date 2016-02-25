@@ -19,9 +19,21 @@ namespace ODataBreezejsSample.Controllers
 
             return View();
         }
-        public ActionResult Bowa()
+        public ActionResult BowaA()
         {
-            ViewBag.Message = "The BOWA Sample.";
+            ViewBag.Message = "Original sample with breeze.debug.js";
+
+            return View();
+        }
+        public ActionResult BowaB()
+        {
+            ViewBag.Message = "Separate adapters - Q is not defined error";
+
+            return View();
+        }
+        public ActionResult BowaC()
+        {
+            ViewBag.Message = "Separate adapters with fixed breeze.dataService.odata.js";
 
             return View();
         }
